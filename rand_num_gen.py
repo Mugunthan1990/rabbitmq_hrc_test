@@ -1,4 +1,3 @@
-
 import random
 
 def randNumGen(size):
@@ -15,9 +14,9 @@ def reverse_num(num,revr_num):
     else:
         Reminder = num % 10
         revr_num = (revr_num * 10) + Reminder
-        reverse_num(num // 10,revr_num)
-    return revr_num
+    return  reverse_num(num // 10,revr_num)
+
 
 t = randNumGen(10)
 print(t)
-print(reverse(t,0))
+print(reverse_num(t,0))

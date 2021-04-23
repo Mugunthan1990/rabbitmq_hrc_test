@@ -7,16 +7,11 @@ def randNumGen(size):
     return random.randint(start_range, end_range)
 
 
-def reverse_num(num,revr_num):
+def reverseNum(num,revr_num):
     #This function reverse a number using recursive method
     if num ==0:
         return revr_num
     else:
         Reminder = num % 10
         revr_num = (revr_num * 10) + Reminder
-    return  reverse_num(num // 10,revr_num)
-
-
-t = randNumGen(10)
-print(t)
-print(reverse_num(t,0))
+    return  reverseNum(num // 10,revr_num)

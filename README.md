@@ -9,3 +9,4 @@ Method to running the script
 - You will see the published random number from producer in consumer terminal
 - To send reversed random number producer from consumer Press CTRL+C  consumer terminal, You will see the message to enter the number  consumer terminal. Enter the number that you want to reverse and send to producer  consumer terminal
 - Finally You can see the received reversed number in  Producer terminal
+- Restart both scripts and do the above to check other numbers.

@@ -8,9 +8,9 @@ except Exception as e:
 
 if __name__ == "__main__":
     # Sending Message to Consumer
-    server = main.RabbitmqConfiguration(queue='hello',
+    server = main.RabbitmqConfiguration(queue='result_1',
                                    host='localhost',
-                                   routing_key='hello',
+                                   routing_key='result_1',
                                    exchange='')
     #Using the context manager
     with main.RabbitMq(server) as rabbitmq:
@@ -20,6 +20,6 @@ if __name__ == "__main__":
 
     # Reciving Message From Consumer
     serverconfig = main.RabbitMqServerConfigure(host='localhost',
-                                            queue='hello_2')
+                                            queue='result_2')
     server = main.rabbitmqServer(server=serverconfig)
     server.startserver()

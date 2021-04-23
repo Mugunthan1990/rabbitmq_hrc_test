@@ -11,7 +11,7 @@ except Exception as e:
 if __name__ == "__main__":
     #Reciving Message from Producer
     serverconfig = main.RabbitMqServerConfigure(host='localhost',
-                                            queue='hello')
+                                            queue='result_1')
     with main.rabbitmqServer(serverconfig) as rabbitmq:
         rabbitmq = main.rabbitmqServer(server=serverconfig)
         rabbitmq.startserver()
@@ -20,9 +20,9 @@ if __name__ == "__main__":
 
 
     #Sending message to Producer
-    server = main.RabbitmqConfiguration(queue='hello_2',
+    server = main.RabbitmqConfiguration(queue='result_2',
                                    host='localhost',
-                                   routing_key='hello_2',
+                                   routing_key='result_2',
                                    exchange='')
     with main.RabbitMq(server) as rabbitmq:
         rabbitmq = main.RabbitMq(server)
